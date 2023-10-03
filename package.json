@@ -1,0 +1,28 @@
+{
+  "name": "trazi-city-populations",
+  "version": "1.0.0",
+  "description": "Node.js service for Trazi back-end application",
+  "main": "app.js",
+  "scripts": {
+    "postinstall": "psql < trazi_db.sql && node cvs_to_postgres.js",
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianelizondo/trazi.git"
+  },
+  "author": "Brian Elizondo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brianelizondo/trazi/issues"
+  },
+  "homepage": "https://github.com/brianelizondo/trazi#readme",
+  "dependencies": {
+    "@fastify/cors": "^8.4.0",
+    "@fastify/postgres": "^5.2.0",
+    "fast-csv": "^4.3.6",
+    "fastify": "^4.23.2",
+    "pg": "^8.11.3"
+  }
+}
